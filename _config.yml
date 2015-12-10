@@ -78,6 +78,6 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:senpng/blog.git
-  branch: gh-pages
+  repo: git@github.com:senpng/senpng.github.io.git
+  branch: master
   message: Site updated:{{ now("YYYY-MM-DD HH:mm:ss") }}
