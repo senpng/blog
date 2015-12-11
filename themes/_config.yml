@@ -166,7 +166,7 @@ swiftype_key: _96U9MvEn_3k9yyyohkr
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: SenPng
+# duoshuo_shortname: SenPng
 
 # Disqus
 #disqus_shortname:
@@ -196,7 +196,7 @@ duoshuo_info:
   #admin_nickname: ROOT
 
 # 多说热评文章 true 或者 false
-duoshuo_hotartical: true
+# duoshuo_hotartical: true
 
 
 # Facebook SDK Support.
