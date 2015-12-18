@@ -134,7 +134,8 @@ git diff HEAD -- <file> //可以查看工作区和版本库里面最新版本的
 ```
 使用第三方对比工具
 ```bash
-git difftool --tool=bc//使用Beyond Compare
+git difftool --tool=bc //使用Beyond Compare
+git difftool -t bc HEAD
 ```
 
 ### 撤销修改
