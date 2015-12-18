@@ -60,6 +60,27 @@ Hexo支持EJS、Swig和Stylus。通过插件支持Haml、Jade和Less.
 
 伺服器会跑在 http://localhost:port （port 预设为 **4000**，可在 **_config.yml** 设定。
 
+### 部署
+
+这里介绍下git部署
+
+安装**hexo-deployer-git**
+
+    npm install hexo-deployer-git --save
+
+修改`_config.yml`:
+
+    deploy:
+      type: git
+      repo: <repository url>
+      branch: [branch]
+      message: [message]
+
+部署
+  
+    hexo d --generate
+
+
 ### 默认目录结构
 
 *   .deploy：执行hexo deploy命令部署到GitHub上的内容目录
@@ -154,8 +175,10 @@ Hexo支持EJS、Swig和Stylus。通过插件支持Haml、Jade和Less.
     # Deployment #部署
     ## Docs: http://hexo.io/docs/deployment.html
     deploy:
-      type: github
-      repository: git@github.com:senpng/hexo.git #你的GitHub Pages仓库
+      type: git
+      repo: git@github.com:senpng/senpng.github.io.git
+      branch: master
+      message: Site updated:{.{ now("YYYY-MM-DD HH:mm:ss") }} #这里的 . 需要去掉
 
 
 ## 主题 [NexT](https://github.com/iissnan/hexo-theme-next)

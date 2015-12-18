@@ -136,7 +136,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
@@ -160,13 +160,13 @@ mathjax: true
 
 
 # Swiftype Search API Key
-#swiftype_key:
+# swiftype_key: _96U9MvEn_3k9yyyohkr
 
 # Baidu Analytics ID
 #baidu_analytics:
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+# duoshuo_shortname: SenPng
 
 # Disqus
 #disqus_shortname:
@@ -175,7 +175,7 @@ mathjax: true
 #jiathis:
 
 # Share
-#duoshuo_share: true
+# duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -183,7 +183,7 @@ mathjax: true
 
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-71259236-1
 
 
 # Make duoshuo show UA
@@ -194,6 +194,9 @@ duoshuo_info:
   admin_enable: false
   user_id: 0
   #admin_nickname: ROOT
+
+# 多说热评文章 true 或者 false
+# duoshuo_hotartical: true
 
 
 # Facebook SDK Support.

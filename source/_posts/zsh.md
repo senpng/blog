@@ -1,7 +1,7 @@
 title: 终端折腾：Oh－My－ZSH
 date: 2015-12-03 17:36:18
-tags: [zsh,powerline,vim]
-category: 终端
+tags: [zsh,powerline,vim,Terminal]
+category: 
 ---
 
 ## 了解 [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh)
@@ -78,13 +78,13 @@ oh-my-zsh有很多[插件](https://github.com/robbyrussell/oh-my-zsh/tree/master
 ## [PowerLine](https://github.com/powerline/powerline)
 在安装配置zsh的时候，我发现了一个强大的功能插件：`PowerLine`，先贴张我已经配置好的截图。
 
-![Vim](/images/vim.png)
+![Vim](/images/zsh/vim.png)
 
 注意到Vim界面下的那条状态栏了没？就是那个，目前我也就当显示好看用的:)
 
 zsh终端也可以配置成使用PowerLine的。不过个人觉得不怎么好看，就没使用。我这里就再贴张zsh使用PowerLine的截图
 
-![Terminal](/images/terminal.png)
+![Terminal](/images/zsh/terminal.png)
 
 ### 安装
 需要先安装 `python`

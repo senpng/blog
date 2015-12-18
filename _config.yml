@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://senpng.me
+url: https://senpng.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -40,7 +40,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: true
   tab_replace:
 
@@ -77,4 +77,7 @@ theme: next
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:senpng/senpng.github.io.git
+  branch: master
+  message: Site updated:{{ now("YYYY-MM-DD HH:mm:ss") }}
