@@ -35,6 +35,8 @@ git merge <name> //合并<name>分支到当前分支
 git merge --no-ff -m "merge with no-ff" <name> //(--no-ff参数，表示禁用Fast forward)
 git rebase <name>  //合并<name>分支。但是当前分支的所有提交信息将丢失
 ```
+![--no-ff](/images/git/git.jpg)
+
 #### Example
 取回origin主机的next分支，与本地的master分支合并
 ```bash
@@ -154,6 +156,15 @@ git reset HEAD <file>//暂存区的修改撤销掉（unstage),重新放回工作
 ```bash
 git checkout <commit_id> -- <file>
 ```
+
+### 暂时保留修改
+```bash
+git stash //保留当前的修改
+```
+```bash
+git stash pop //恢复之前的修改
+```
+
 
 ## 分支策略
 在实际开发中，我们应该按照几个基本原则进行分支管理：

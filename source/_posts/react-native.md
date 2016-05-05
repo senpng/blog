@@ -78,3 +78,5 @@ RCT_CUSTOM_VIEW_PROPERTY(自定义事件名称, RCTBubblingEventBlock, 自定义
 ```
 `RCTDirectEventBlock`:直接事件,这种事件类型作为不影响UI的一些事件，比如“图片加载失败”。
 `RCTBubblingEventBlock`:冒泡事件,就和操作DOM一样，影响UI的事件，比如“点击按钮事件”。
+
+## 未完待续

@@ -180,6 +180,17 @@ Hexo支持EJS、Swig和Stylus。通过插件支持Haml、Jade和Less.
       branch: master
       message: Site updated:{.{ now("YYYY-MM-DD HH:mm:ss") }} #这里的 . 需要去掉
 
+### 常见错误
+```bash
+{ [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+```
+
+解决方法:
+```bash
+npm install hexo --no-optional
+```
 
 ## 主题 [NexT](https://github.com/iissnan/hexo-theme-next)
 
