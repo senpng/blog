@@ -3,6 +3,8 @@ date: 2015-12-18 17:33:19
 tags: [Git,Terminal]
 ---
 
+![git使用教程](/images/git/git使用教程.jpg)
+
 ## 分支
 ### 查看分支
 ```bash
@@ -67,6 +69,26 @@ git branch --set-upstream <branchname> origin/<branchname>
 ```bash
 git commit --amend
 ```
+#### 修改指定的描述信息
+`git`使用`amend`选项提供了最后一次`commit`的反悔。但是对于历史提交呢，就必须使用`rebase`了。
+```bash
+git rebase -i HEAD~3
+```
+表示要修改当前版本的倒数第三次状态。
+这个命令出来之后，会出来三行东东：
+```
+pick:*******
+pick:*******
+pick:*******
+```
+如果你要修改哪个，就把那行的`pick`改成`edit`，然后退出。
+这时通过`git log`你可以发现，`git`的最后一次提交已经变成你选的那个了，这时再使用：
+```bash
+git commit --amend
+``
+来对`commit`进行修改。
+修改完了之后，要回来对不对？
+使用`git rebase --continue`
 
 ### 撒销
 如果你觉得你合并后的状态是一团乱麻，想把当前的修改都放弃，你可以用下面的命令回到合并之前的状态：
