@@ -28,3 +28,22 @@ sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstall
   diskutil cs list    //查看逻辑磁盘状态 查看实际可用容量
   diskutil coreStorage createVolume BBC6AD77-ADF2-40EE-A1D0-68BFE4913966 jhfs+ Name 375g //建立Fusion Drive 后面的容量大小不可大于实际可用容量
   ```    
+  
+## Fix Open Directory Will Not Turn On
+```
+sudo launchctl unload /System/LIbrary/LaunchDaemons/org.openldap.slapd.plist
+
+RepairPermissions /
+
+sudo db_recover -cv -h /var/db/openldap/openldap-data/
+
+sudo /usr/libexec/slapd -Tt
+
+sudo db_recover -cv -h /var/db/openldap/authdata/
+
+sudo /usr/libexec/slapd -Tt
+
+sudo launchctl load /System/LIbrary/LaunchDaemons/org.openldap.slapd.plist
+```
+
+

@@ -11,12 +11,16 @@ date: 2016-9-27
 * xScope
 * Cornerstone
 * iTranslate
+* Backgrounds
+* Moom
+* Entropy
 
 ### Cocoapods
 ```bash
-gem sources --remove https://rubygems.org/
-gem sources -a https://ruby.taobao.org/
-sudo gem install cocoapods --pre
+sudo gem update --system
+gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+sudo gem install -n /usr/local/bin cocoapods --pre
+pod setup
 ```
 
 ### Brew 安装应用
@@ -30,18 +34,28 @@ brew analytics off
 ssh-keygen -t rsa -b 4096 -C "senpng@qq.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
+
+git config --global user.name 'SenPng'
+git config --global user.email 'senpng@qq.com'
 ```
 
 #### NVM
 ```bash
 brew install nvm
-nvm install node && node alias default node //安装最新node并设置为默认的版本
+nvm install node && nvm alias default node //安装最新node并设置为默认的版本
 mkdir ~/.nvm
 ```
  添加到`~/.zshrc`:
 ```
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
+```
+
+#### Vagrant
+```bash
+brew cask install virtualbox
+brew cask install vagrant
+sudo rm -rf /opt/vagrant/embedded/bin/curl
 ```
 
 #### ReactNative
@@ -141,13 +155,23 @@ brew cask install reveal
 ```
 <!-- [macreveal-Reveal-iOS](/media/macreveal-Reveal-iOS.reveallicense) -->
 
+#### Flashlight
+**之前需要关闭系统内核保护**
+`csrutil disable`
+
+```bash
+brew cask install flashlight
+```
+
 #### Other
 ```bash
 xcode-select --install
-brew cask install google-chrome java android-studio shadowsocksx thunder paw
+brew cask install google-chrome java android-studio shadowsocksx thunder paw cheatsheet packages docker charles
+brew install yarn p7zip
+sudo gem install -n /usr/local/bin fastlane -NV
 ```
 ```bash
-npm i -g cnpm http-server
+npm i -g http-server
 npm i -g hexo-cli
 ```
 ### ZSH
@@ -186,7 +210,7 @@ Meslo LG S for Powerline
 ```
 修改`~/.zshrc`配置
 ```
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 ###### macvim
 安装`macvim`
@@ -243,6 +267,9 @@ colorscheme github
 ```bash
 sudo spctl --master-disable
 ```
+#### 辅助功能
+* 开启三指头拖移
+* 开启按下按键时朗读所选文本
 
 #### Mission Control
 * 关闭Dashboard
@@ -258,6 +285,7 @@ sudo spctl --master-disable
 #### Spotlight
 
 #### 触摸板
+静默点按
 
 #### iCloud
 * 照片：开启iCloud和照片流
@@ -265,6 +293,12 @@ sudo spctl --master-disable
 #### 用户与群组
 * 密码提示：当你看到这行字，说明你离我电脑太近了！
 * 关闭客户登录
+
+#### 键盘
+* 开启输入法菜单在菜单栏显示   
+* 使用大小写键盘切换中英文输入法
+* 自动切换输入法
+* 快捷键 切换输入源：`opt + command + space`, 屏蔽之前的快捷键
 
 ### 其它
 下载图标
